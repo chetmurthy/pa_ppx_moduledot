@@ -29,3 +29,24 @@ This PPX rewriter is a little prototype to allow that syntax.  So this rewriter 
 ```
 to the above right-hand-side.
 
+## Installation
+
+To install, you need pre-release versions of `camlp5` and `pa_ppx`.  Here's a little script to get 'em:
+
+
+```
+opam pin remove camlp5 pa_ppx
+opam pin -y -n add camlp5 https://github.com/camlp5/camlp5.git
+opam pin -y -n add pa_ppx https://github.com/camlp5/pa_ppx.git
+opam install -y -t pa_ppx
+```
+
+Then you can just
+```
+opam install .
+```
+
+or (more traditionally)
+```
+make sys test
+```
